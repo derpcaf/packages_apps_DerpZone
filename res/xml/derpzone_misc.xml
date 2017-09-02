@@ -54,6 +54,12 @@
             android:summary="@string/pocket_judge_summary"
             android:defaultValue="false" />
 
+        <Preference
+             android:key="wakelock_blocker"
+             android:title="@string/wakelock_blocker_title"
+             android:summary="@string/wakelock_blocker_summary"
+             android:fragment="com.derpcaf.derpzone.fragments.WakeLockBlocker" />
+
         <com.derpcaf.derpzone.preferences.GlobalSettingSwitchPreference
             android:key="wake_when_plugged_or_unplugged"
             android:title="@string/wakeup_when_plugged_unplugged_title"
