@@ -60,6 +60,12 @@
              android:summary="@string/wakelock_blocker_summary"
              android:fragment="com.derpcaf.derpzone.fragments.WakeLockBlocker" />
 
+        <Preference
+             android:id="@+id/alarm_blocker"
+             android:title="@string/alarm_blocker"
+             android:summary="@string/alarm_blocker_summary"
+             android:fragment="com.derpcaf.derpzone.fragments.AlarmBlocker" />
+
         <com.derpcaf.derpzone.preferences.GlobalSettingSwitchPreference
             android:key="wake_when_plugged_or_unplugged"
             android:title="@string/wakeup_when_plugged_unplugged_title"
