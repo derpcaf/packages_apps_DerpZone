@@ -31,7 +31,13 @@
         android:summary="@string/gesture_anywhere_summary"
         android:fragment="com.derpcaf.derpzone.gestureanywhere.GestureAnywhereSettings" />
 
-    <com.derpcaf.derpzone.preferences.SystemSettingSwitchPreference
+    <Preference
+        android:key="edge_gestures" 
+        android:title="@string/edge_gestures_title" 
+        android:summary="@string/edge_gestures_summary" 
+        android:fragment="com.derpcaf.derpzone.fragments.EdgeGesturesSettings"/>
+
+<com.derpcaf.derpzone.preferences.SystemSettingSwitchPreference
         android:key="use_bottom_gesture_navigation"
         android:title="@string/gesture_settings_title"
         android:summary="@string/gesture_settings_summary"
