@@ -80,6 +80,14 @@
             android:fragment="com.derpcaf.derpzone.fragments.NotificationSettings"
             android:icon="@drawable/ic_settings_notification"/>
 
+        <!-- Decor Room -->
+        <PreferenceScreen
+            android:key="decorroom_category"
+            android:title="@string/decorroom_title"
+            android:summary="@string/decorroom_summary"
+            android:fragment="com.derpcaf.derpzone.fragments.DecorRoom"
+            settings:allowDividerAbove="true" />
+
         <!-- Misc -->
         <Preference
             android:key="misc_category"

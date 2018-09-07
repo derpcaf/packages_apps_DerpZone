@@ -26,6 +26,8 @@
     <string name="statusbar_title">Status bar</string>
     <string name="volume_title">Volume rockers</string>
     <string name="notifications_title">Notifications</string>
+    <string name="decorroom_title">Decor Room</string>
+    <string name="decorroom_summary">misc decorations</string>
 
     <!-- General strings -->
     <string name="ok">OK</string>
