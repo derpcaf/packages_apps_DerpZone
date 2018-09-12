@@ -49,6 +49,12 @@
             android:fragment="com.derpcaf.derpzone.fragments.StatusBarBattery" />
 
     <Preference
+         android:key="batterybar_settings"
+         android:title="@string/battery_bar_title"
+         android:summary="@string/battery_bar_summary"
+         android:fragment="com.derpcaf.derpzone.fragments.BatterybarSettings" />
+
+    <Preference
          android:key="clock_settings"
          android:title="@string/clock_style_category_title"
          android:summary="@string/clock_style_category_summary"
