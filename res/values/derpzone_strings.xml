@@ -1238,4 +1238,8 @@
     <string name="alarm_blocker_warning_title">Proceed with caution</string>
     <string name="alarm_blocker_warning">Blocking alarms have the potential to cause instability, crashes or data loss.</string>
        
+    <!-- Toast app icon -->
+    <string name="toast_icon_title">Toast app icon</string>
+    <string name="toast_icon_summary">Display the app\'s icon corresponding with the toast</string>
+
 </resources>

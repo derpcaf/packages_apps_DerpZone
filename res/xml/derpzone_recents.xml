@@ -34,6 +34,21 @@
 
      <PreferenceCategory
          android:key="recents_ui_oreo_recents_category"
+         android:title="@string/oreo_recents_category">
+
+    <com.derpcaf.derpzone.preferences.SystemSettingSwitchPreference
+        android:key="show_clear_all_recents"
+        android:title="@string/show_clear_all_recents_button_title"
+        android:summary="@string/show_clear_all_recents_button_summary"
+        android:defaultValue="false" />
+    
+    <ListPreference
+        android:key="recents_clear_all_location"
+        android:title="@string/recents_clear_all_location_title"
+        android:entries="@array/recents_clear_all_location_entries"
+        android:entryValues="@array/recents_clear_all_location_values"
+        android:defaultValue="3"
+        android:dependency="show_clear_all_recents" />
 
     <PreferenceCategory
         android:key="slim_recents_category"
@@ -50,20 +65,6 @@
             android:summary="@string/slim_recents_fragment_summary"
             android:dependency="use_slim_recents" />
     </PreferenceCategory>
-
-    <com.derpcaf.derpzone.preferences.SystemSettingSwitchPreference
-        android:key="show_clear_all_recents"
-        android:title="@string/show_clear_all_recents_button_title"
-        android:summary="@string/show_clear_all_recents_button_summary"
-        android:defaultValue="false" />
-    
-    <ListPreference
-        android:key="recents_clear_all_location"
-        android:title="@string/recents_clear_all_location_title"
-        android:entries="@array/recents_clear_all_location_entries"
-        android:entryValues="@array/recents_clear_all_location_values"
-        android:defaultValue="3"
-        android:dependency="show_clear_all_recents" />
 
     <ListPreference
         android:key="recents_layout_style"

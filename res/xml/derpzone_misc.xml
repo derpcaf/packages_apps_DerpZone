@@ -42,12 +42,6 @@
              android:summary="@string/doze_settings_summary"
              android:fragment="com.derpcaf.derpzone.fragments.DozeSettings" />
   
-    <com.derpcaf.derpzone.preferences.SystemSettingSwitchPreference
-            android:key="sensor_block"
-            android:title="@string/sensor_block_title"
-            android:summary="@string/sensor_block_summary"
-            android:defaultValue="true" />
-
         <com.derpcaf.derpzone.preferences.SystemSettingSwitchPreference
             android:key="pocket_judge"
             android:title="@string/pocket_judge_title"
@@ -65,6 +59,12 @@
              android:title="@string/alarm_blocker"
              android:summary="@string/alarm_blocker_summary"
              android:fragment="com.derpcaf.derpzone.fragments.AlarmBlocker" />
+
+    <com.derpcaf.derpzone.preferences.SystemSettingSwitchPreference
+            android:key="sensor_block"
+            android:title="@string/sensor_block_title"
+            android:summary="@string/sensor_block_summary"
+            android:defaultValue="true" />
 
         <com.derpcaf.derpzone.preferences.GlobalSettingSwitchPreference
             android:key="wake_when_plugged_or_unplugged"
