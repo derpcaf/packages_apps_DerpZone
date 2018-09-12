@@ -239,7 +239,6 @@ public class RecentsStyles extends SettingsPreferenceFragment  implements Prefer
     private void resetToDefault() {
         AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
         alertDialog.setTitle(R.string.reset);
-        alertDialog.setMessage(R.string.reset_message);
         alertDialog.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
                 resetValues();
