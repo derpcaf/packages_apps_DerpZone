@@ -18,4 +18,9 @@
 	android:title="@string/misc_title"
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+        <Preference
+            android:title="@string/app_ops_settings"
+            android:summary="@string/app_ops_summary"
+            android:fragment="com.android.settings.applications.appops.AppOpsSummary"/>
+
 </PreferenceScreen>
