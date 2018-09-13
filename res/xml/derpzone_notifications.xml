@@ -86,10 +86,27 @@
 
     </PreferenceCategory>
 
+    <PreferenceCategory
+        android:title="@string/toast_category" >
+
         <com.derpcaf.derpzone.preferences.SystemSettingSwitchPreference
-        android:key="toast_icon"
-        android:title="@string/toast_icon_title"
-        android:summary="@string/toast_icon_summary"
-        android:defaultValue="false" />
+            android:key="toast_icon"
+            android:title="@string/toast_icon_title"
+            android:summary="@string/toast_icon_summary"
+            android:defaultValue="false" />
+
+        <net.margaritov.preference.colorpicker.ColorPickerPreference
+            android:key="toast_icon_color"
+            android:title="@string/toast_icon_color"
+            android:defaultValue="0xffffffff"
+            android:dependency="toast_icon" />
+
+        <net.margaritov.preference.colorpicker.ColorPickerPreference
+            android:key="toast_text_color"
+            android:title="@string/toast_text_color"
+            android:defaultValue="0xeeff0000" />
+
+    </PreferenceCategory>
+>>>>>>> f96da52b... Custom Toast color options [2/2]
 
 </PreferenceScreen>
