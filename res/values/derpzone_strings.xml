@@ -817,4 +817,17 @@
     <string name="edge_gestures_back_show_ui_feedback_title">Back gesture animation</string> 
     <string name="edge_gestures_back_show_ui_feedback_summary">Show animated feedback on edges when back gesture is used</string>
 
+    <!-- Tiles animation style  -->
+    <string name="qs_tile_animation_title">QS Tile Animations</string>  
+    <string name="qs_tile_animation_style_title">Animation style</string>
+    <string name="qs_tile_animation_duration_title">Animation duration</string>
+    <string name="qs_tile_animation_style_off">no animation</string>
+    <string name="qs_tile_animation_style_flip">flip</string>
+    <string name="qs_tile_animation_style_rotate">rotate</string>
+    <string name="qs_tile_animation_duration_low">low</string>
+    <string name="qs_tile_animation_duration_default">default</string>
+    <string name="qs_tile_animation_duration_fast">fast</string>
+    <string name="qs_set_animation_style">Animation is set to %1$s</string>
+    <string name="qs_set_animation_duration">Animation duration is set to %1$s</string>
+
 </resources>
