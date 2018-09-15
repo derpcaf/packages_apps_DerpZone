@@ -59,12 +59,12 @@
             android:fragment="com.derpcaf.derpzone.fragments.PowerMenuSettings"
             settings:allowDividerAbove="true" />
 
-        <!-- Recents
+        <!-- Recents -->
         <Preference
             android:key="recents_category"
             android:title="@string/recents_title"
             android:fragment="com.derpcaf.derpzone.fragments.RecentsSettings"
-            settings:allowDividerAbove="true" /> -->
+            settings:allowDividerAbove="true" />
 
         <!-- Smart Nav Bar -->
 	<PreferenceScreen
