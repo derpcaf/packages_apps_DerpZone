@@ -1123,4 +1123,8 @@
     <string name="animation14">Slide Out Up </string>
     <string name="animation15">Fast Rotation</string>
 
+    <!-- Hide On Lockscreen -->
+    <string name="hide_lockscreen_status_bar_title">Hide status bar</string>
+    <string name="hide_lockscreen_status_bar_summary">Touch status bar to toggle visibility</string>
+    
 </resources>

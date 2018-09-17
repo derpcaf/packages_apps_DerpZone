@@ -94,11 +94,11 @@
             android:summary="@string/lockscreen_clock_summary"
             android:defaultValue="true" />
 
-        <com.derpcaf.derpzone.preferences.SystemSettingSwitchPreference
+      <!--  <com.derpcaf.derpzone.preferences.SystemSettingSwitchPreference
             android:key="lockscreen_info"
             android:title="@string/lockscreen_info_title"
             android:summary="@string/lockscreen_info_summary"
-            android:defaultValue="true" />
+            android:defaultValue="true" /> -->
 
         <com.derpcaf.derpzone.preferences.SystemSettingListPreference
             android:key="lockscreen_clock_selection"
@@ -132,6 +132,12 @@
         android:key="face_auto_unlock"
         android:title="@string/face_auto_unlock_title"
         android:summary="@string/face_auto_unlock_summary"
+        android:defaultValue="false" />
+
+    <com.derpcaf.derpzone.preferences.SystemSettingSwitchPreference
+        android:key="hide_lockscreen_status_bar"
+        android:title="@string/hide_lockscreen_status_bar_title"
+        android:summary="@string/hide_lockscreen_status_bar_summary"
         android:defaultValue="false" />
 
     <com.derpcaf.derpzone.preferences.SystemSettingSwitchPreference
