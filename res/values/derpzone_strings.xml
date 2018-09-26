@@ -482,4 +482,8 @@
     <string name="media_art_title">Media cover art</string>
     <string name="media_art_summary">Enable media cover art on the lockscreen</string>
 
+    <!-- QS Running Services Icon -->
+    <string name="qs_running_services_title">Running Services Icon</string>
+    <string name="qs_running_services_summary">Disable the tile running services icon in the footer</string>
+
 </resources>
