@@ -472,4 +472,10 @@
     <string name="allow_signature_fake">Allow signature spoofing</string>
     <string name="allow_signature_fake_summary">Allow apps to bypass security systems by pretending to be a different app.</string>
 
+    <!-- Navigation gestures -->
+    <string name="gesture_settings_title">OP Navigation gestures</string>
+    <string name="gesture_settings_summary">Use bottom swipe up gestures for navigation</string>
+    <string name="use_bottom_gesture_title">Swipe up gestures</string>
+    <string name="gesture_settings_info">Navigation bar must be disabled!\n\nAvailable gestures:\n\nBack\n- Swipe up on left or right side\n\nHome\n- Swipe up center\n\nRecent apps\n- Swipe up center and hold\n\nLast app\n- Short swipe up and hold in the center</string>
+
 </resources>
