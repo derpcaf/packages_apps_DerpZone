@@ -48,6 +48,12 @@
             android:summary="@string/sensor_block_summary"
             android:defaultValue="true" />
 
+        <com.derpcaf.derpzone.preferences.SystemSettingSwitchPreference
+            android:key="pocket_judge"
+            android:title="@string/pocket_judge_title"
+            android:summary="@string/pocket_judge_summary"
+            android:defaultValue="false" />
+
         <com.derpcaf.derpzone.preferences.GlobalSettingSwitchPreference
             android:key="wake_when_plugged_or_unplugged"
             android:title="@string/wakeup_when_plugged_unplugged_title"
