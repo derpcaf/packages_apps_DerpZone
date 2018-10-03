@@ -40,7 +40,7 @@
         android:summary="@string/edge_gestures_summary" 
         android:fragment="com.derpcaf.derpzone.fragments.EdgeGesturesSettings"/>
 
-<com.derpcaf.derpzone.preferences.SystemSettingSwitchPreference
+    <com.derpcaf.derpzone.preferences.SystemSettingSwitchPreference
         android:key="use_bottom_gesture_navigation"
         android:title="@string/gesture_settings_title"
         android:summary="@string/gesture_settings_summary"
@@ -51,6 +51,12 @@
             android:title="@string/long_press_power_torch_title"
             android:summary="@string/long_press_power_torch_summary"
             android:defaultValue="false" />
+
+    <com.derpcaf.derpzone.preferences.SystemSettingSwitchPreference 
+        android:key="three_finger_gesture" 
+        android:title="@string/three_finger_gesture" 
+        android:summary="@string/three_finger_gesture_summary" 
+        android:defaultValue="false" /> 
 
     <PreferenceCategory
          android:key="dtts_category"
