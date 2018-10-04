@@ -606,5 +606,9 @@
     <!-- Charging options -->
     <string name="vibration_on_charge_state_changed_title">Vibrate on plug/unplug</string>
     <string name="vibration_on_charge_state_changed_summary">Enable/disable vibration on plug/unplug</string>
+
+    <!-- Notifications while screen on -->
+    <string name="notification_sound_vib_screen_on_title">Noisy notifications if screen on</string>
+    <string name="notification_sound_vib_screen_on_summary">Play sound and vibration for notifications when screen is on</string>
        
 </resources>
