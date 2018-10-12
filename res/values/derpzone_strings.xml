@@ -879,6 +879,10 @@
     <string name="lockscreen_weather_city_color">Weather City Color</string>
     <string name="lockscreen_weather_icon_color">Weather Icon Color</string>
     <string name="yes">YES</string>
+
+    <!-- Quick Settings -->
+    <string name="lockscreen_qs_disabled_title">Disable quick settings when locked</string>
+    <string name="lockscreen_qs_disabled_summary">Disable expanding quick settings on secure lock screens</string>
        
     <!-- Edge gestures -->
     <string name="edge_gestures_title">Edge gestures</string>

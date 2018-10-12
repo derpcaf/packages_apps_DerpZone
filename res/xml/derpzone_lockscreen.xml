@@ -140,6 +140,12 @@
         android:summary="@string/hide_lockscreen_status_bar_summary"
         android:defaultValue="false" />
 
+    <com.derpcaf.derpzone.preferences.SecureSettingSwitchPreference
+        android:key="status_bar_locked_on_secure_keyguard"
+        android:title="@string/lockscreen_qs_disabled_title"
+        android:summary="@string/lockscreen_qs_disabled_summary"
+        android:defaultValue="false" />
+
     <com.derpcaf.derpzone.preferences.SystemSettingSwitchPreference
         android:key="fp_unlock_keystore"
         android:title="@string/fp_unlock_keystore_title"
