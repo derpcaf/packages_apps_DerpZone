@@ -66,6 +66,11 @@
             android:defaultValue="false" />
 
         <com.derpcaf.derpzone.preferences.SystemSettingSwitchPreference
+
+    <PreferenceCategory
+         android:title="@string/dashboard_cat" />
+
+        <com.derpcaf.derpzone.preferences.SystemSettingSwitchPreference
             android:key="enable_conditions"
             android:title="@string/dashboard_conditions_title"
             android:summaryOn="@string/summary_dashboard_conditions_enabled"
@@ -79,5 +84,10 @@
             android:summaryOff="@string/summary_dashboard_suggestions_disabled"
             android:defaultValue="true" />
 
+        <com.derpcaf.derpzone.preferences.SystemSettingSwitchPreference
+            android:key="remove_tile_summary"
+            android:title="@string/tile_summary_title"
+            android:summary="@string/tile_summary"
+            android:defaultValue="false" />
 
 </PreferenceScreen>
