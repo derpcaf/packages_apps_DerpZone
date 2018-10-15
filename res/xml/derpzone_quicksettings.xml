@@ -24,6 +24,13 @@
         android:summary="@string/qs_show_brightness_summary"
         android:defaultValue="true" />
 
+    <com.derpcaf.derpzone.preferences.SystemSettingSwitchPreference
+        android:key="qs_show_brightness_icon"
+        android:title="@string/brightness_icon_title"
+        android:summary="@string/brightness_icon_summary"
+        android:dependency="qs_show_brightness_slider"
+        android:defaultValue="false"/>
+
     <com.derpcaf.derpzone.preferences.SecureSettingSwitchPreference
         android:key="qs_brightness_position_bottom"
         android:title="@string/qs_brightness_position_bottom_title"
@@ -57,6 +64,6 @@
         android:key="qs_running_services_toggle"
         android:title="@string/qs_running_services_title"
         android:summary="@string/qs_running_services_summary"
-        android:defaultValue="false" />
+        android:defaultValue="true" />
 
 </PreferenceScreen>
