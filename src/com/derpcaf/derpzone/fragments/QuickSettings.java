@@ -24,7 +24,7 @@ import android.view.View;
 import java.util.List;
 import java.util.ArrayList;
 
-import com.msm.xtended.preferences.SystemSettingSeekBarPreference;
+import com.derpcaf.derpzone.preferences.SystemSettingSeekBarPreference;
 
 public class QuickSettings extends SettingsPreferenceFragment implements
         OnPreferenceChangeListener {
