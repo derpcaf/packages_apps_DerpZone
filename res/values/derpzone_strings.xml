@@ -929,4 +929,10 @@
     <string name="navigationbar_settings_title">SmartNav Bar</string>
     <string name="navigationbar_settings_summary">Smart Nav Bar Customizations</string>
 
+   <!-- LS OwnerInfo Font & Size -->
+    <string name="lock_ownerinfo_font_title">OwnerInfo font options</string>
+    <string name="lock_ownerinfo_font_summary">Change the default font of the lockscreen owner info</string>
+    <string name="lock_ownerinfo_font_dialog_title">Select lock ownerinfo font</string>
+    <string name="lockowner_font_size_title">Owner info font size</string>
+       
 </resources>

@@ -61,6 +61,15 @@
         android:summary="@string/lock_date_font_summary"
         android:persistent="false" />
 
+    <ListPreference
+        android:key="lock_ownerinfo_fonts"
+        android:title="@string/lock_ownerinfo_font_title"
+        android:dialogTitle="@string/lock_ownerinfo_font_dialog_title"
+        android:summary="@string/lock_ownerinfo_font_summary"
+        android:entries="@array/lock_clock_fonts_entries"
+        android:entryValues="@array/lock_clock_fonts_values"
+        android:persistent="false" />
+
     <com.derpcaf.derpzone.preferences.CustomSeekBarPreference
         android:key="lockclock_font_size"
         android:title="@string/lockclock_font_size_title"
@@ -97,6 +106,15 @@
             android:entries="@array/lockscreen_clock_selection_entries"
             android:entryValues="@array/lockscreen_clock_selection_values"
             android:defaultValue="0" />
+
+    <com.derpcaf.derpzone.preferences.CustomSeekBarPreference
+        android:key="lockowner_font_size"
+        android:title="@string/lockowner_font_size_title"
+        android:max="25"
+        settings:min="1"
+        settings:units="sp"
+        android:defaultValue="21"
+        android:persistent="false" />
 
     <PreferenceScreen
     	android:key="lockscreen_colors"
