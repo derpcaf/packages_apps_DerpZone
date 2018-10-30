@@ -776,5 +776,9 @@
     <string name="gesture_anywhere_68">68px</string>
     <!-- Summaries For Forgotten Ones -->
     <string name="gesture_anywhere_summary">Gesture Anywhere Settings</string>
+
+    <!-- Navbar Animation -->
+    <string name="pixel_navbar_anim_title">Pixel animation</string>
+    <string name="pixel_navbar_anim_summary">Toggle home button animation</string>
        
 </resources>
