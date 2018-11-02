@@ -93,6 +93,12 @@
         android:defaultValue="false"
         android:dependency="qs_show_brightness_slider" />
 
+    <com.derpcaf.derpzone.preferences.SystemSettingSwitchPreference
+	android:key="qs_show_info_header"
+	android:title="@string/tuner_show_info_header_title"
+	android:summary="@string/tuner_show_info_header_category"
+	android:defaultValue="true" />
+
     <ListPreference
         android:key="quick_pulldown"
         android:title="@string/quick_pulldown_title"
