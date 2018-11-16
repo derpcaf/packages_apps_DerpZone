@@ -19,9 +19,10 @@
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
         <Preference
-            android:title="@string/app_ops_settings"
+            android:key="privacy_guard_manager"	    
+            android:title="@string/app_ops_settings_title"
             android:summary="@string/app_ops_summary"
-            android:fragment="com.android.settings.applications.appops.AppOpsSummary"/>
+            android:fragment="com.android.settings.privacyguard.PrivacyGuardManager"/>
 
         <Preference
             android:key="suspend_actions"

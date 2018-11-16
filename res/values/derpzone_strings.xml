@@ -94,6 +94,7 @@
     <string name="long_press_power_torch_summary">Toggle flashlight when screen is off</string>
 
     <!-- App Ops -->
+    <string name="app_ops_settings_title">Privacy Guard</string>
     <string name="app_ops_summary">Control apps operations</string>
 
     <!-- Quick Settings brightness slider -->
