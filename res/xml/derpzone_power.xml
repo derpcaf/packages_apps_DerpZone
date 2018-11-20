@@ -33,7 +33,7 @@
             android:title="@string/powermenu_restart_recovery"
             android:defaultValue="true" />
 
-    	 <com.msm.xtended.preferences.SystemSettingSwitchPreference
+    	 <com.derpcaf.derpzone.preferences.SystemSettingSwitchPreference
        	    android:key="powermenu_screenrecord"
             android:title="@string/powermenu_screenrecord"
 	    android:defaultValue="true" />
@@ -43,7 +43,7 @@
             android:title="@string/powermenu_screenshot"
             android:defaultValue="false" />
 
-    	 <com.msm.xtended.preferences.SystemSettingSwitchPreference
+    	 <com.derpcaf.derpzone.preferences.SystemSettingSwitchPreference
             android:key="global_actions_onthego"
 	    android:title="@string/global_actions_onthego"
 	    android:defaultValue="true" />

@@ -38,7 +38,7 @@ import android.view.DisplayInfo;
 import android.view.Surface;
 import android.view.WindowManager;
 
-public final class Utils {
+public final class DerpcafUtils {
     private static final String TAG = "DerpZoneUtils";
 
     // Device types

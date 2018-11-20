@@ -61,7 +61,7 @@ public class PowerMenuSettings extends SettingsPreferenceFragment
 
         mPowermenuTorch = (SwitchPreference) findPreference(KEY_POWERMENU_TORCH);
         mPowermenuTorch.setOnPreferenceChangeListener(this);
-        if (!XUtils.deviceSupportsFlashLight(getActivity())) {
+        if (!DerpcafUtils.deviceSupportsFlashLight(getActivity())) {
             prefScreen.removePreference(mPowermenuTorch);
         } else {
         mPowermenuTorch.setChecked((Settings.System.getInt(resolver,
