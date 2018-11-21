@@ -52,7 +52,7 @@ public class NotificationSettings extends SettingsPreferenceFragment
         mFlashlightOnCall.setSummary(mFlashlightOnCall.getEntry());
         mFlashlightOnCall.setOnPreferenceChangeListener(this);
 
-        if (!XUtils.deviceSupportsFlashLight(getActivity())) {
+        if (!DerpcafUtils.deviceSupportsFlashLight(getActivity())) {
             prefScreen.removePreference(FlashOnCall);
         }
     }

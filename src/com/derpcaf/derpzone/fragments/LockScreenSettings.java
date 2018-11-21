@@ -61,7 +61,7 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
         Resources resources = getResources();
 
         mFaceUnlock = (SwitchPreference) findPreference(KEY_FACE_AUTO_UNLOCK);
-        if (!XUtils.isPackageInstalled(getActivity(), KEY_FACE_UNLOCK_PACKAGE)){
+        if (!DerpcafUtils.isPackageInstalled(getActivity(), KEY_FACE_UNLOCK_PACKAGE)){
             prefScreen.removePreference(mFaceUnlock);
         } else {
             mFaceUnlock.setChecked((Settings.Secure.getInt(getContext().getContentResolver(),

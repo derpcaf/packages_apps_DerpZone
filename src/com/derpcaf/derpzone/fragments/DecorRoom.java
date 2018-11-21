@@ -33,7 +33,7 @@ public class DecorRoom extends SettingsPreferenceFragment implements
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
 
-        addPreferencesFromResource(R.xml.derpcaf_decor_room);
+        addPreferencesFromResource(R.xml.derpzone_decor_room);
 
     }
 
