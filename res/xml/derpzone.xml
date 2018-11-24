@@ -73,6 +73,14 @@
             android:fragment="com.derpcaf.derpzone.fragments.RecentsSettings"
             settings:allowDividerAbove="true" />
 
+        <!-- Smart Nav Bar -->
+	<PreferenceScreen
+            android:key="navigationbar_settings"
+            android:title="@string/navigationbar_settings_title"
+	    android:summary="@string/navigationbar_settings_summary"
+	    android:fragment="com.android.settings.smartnav.NavigationBarSettings"
+            settings:allowDividerAbove="true" />
+
         <!-- Notifications -->
         <Preference
             android:key="notifications_category"
