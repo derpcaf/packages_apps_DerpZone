@@ -870,7 +870,7 @@
     <string name="volume_panel_on_left_title">Volume Panel on Left</string>
     <string name="volume_panel_on_left_summary">Change volume panel from right side to left side</string>
 
-    <string name="navigationbar_settings_title">SmartNav Bar</string>
-    <string name="navigationbar_settings_summary">Smart Nav Bar Customizations</string>
+    <string name="navigationbar_settings_title">Navigation Bar</string>
+    <string name="navigationbar_settings_summary">NavBar Customizations</string>
 
 </resources>

@@ -38,13 +38,6 @@
             android:fragment="com.derpcaf.derpzone.fragments.ButtonSettings"
             settings:allowDividerAbove="true" />
 
-        <!-- Navigation Bar -->
-        <Preference
-            android:key="navigationbar_category"
-            android:title="@string/navbar_title" 
-            android:fragment="com.derpcaf.derpzone.fragments.NavbarSettings"
-            settings:allowDividerAbove="true" />
-
         <!-- Gestures -->
         <Preference
             android:key="gestures_category"
@@ -66,18 +59,17 @@
             android:fragment="com.derpcaf.derpzone.fragments.PowerMenuSettings"
             settings:allowDividerAbove="true" />
 
-        <!-- Recents -->
+        <!-- Recents
         <Preference
             android:key="recents_category"
             android:title="@string/recents_title"
             android:fragment="com.derpcaf.derpzone.fragments.RecentsSettings"
-            settings:allowDividerAbove="true" />
+            settings:allowDividerAbove="true" /> -->
 
         <!-- Smart Nav Bar -->
 	<PreferenceScreen
             android:key="navigationbar_settings"
             android:title="@string/navigationbar_settings_title"
-	    android:summary="@string/navigationbar_settings_summary"
 	    android:fragment="com.android.settings.smartnav.NavigationBarSettings"
             settings:allowDividerAbove="true" />
 
