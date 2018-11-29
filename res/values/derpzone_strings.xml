@@ -361,6 +361,10 @@
 
     <!-- Enable keys backlight-->
     <string name="button_brightness_sw_title">Enable backlight</string>
+
+    <!-- NavBar Visibility -->
+    <string name="navbar_visibility">Navbar Buttons</string>
+    <string name="navbar_visibility_summary">Show Navigation Buttons</string>
     
      <!-- Roaming indicator icon -->
     <string name="roaming_indicator_icon_title">Roaming indicator</string>
