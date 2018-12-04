@@ -434,10 +434,6 @@
      <string name="screen_state_on_delay_summary">Number of seconds to wait before performing actions after screen on</string>
      <string name="screen_state_toggles_summary_opt">Control how the device network should behave when the screen is off</string>
 
-     <!-- Fingerprint unlock keystore -->
-    <string name="fp_unlock_keystore_title">Fingerprint unlock</string>
-    <string name="fp_unlock_keystore_summary">Unlock device with fingerprint after reboot without PIN/Password/Pattern\nNote: at your own risk!</string>
-
     <!-- StatusBar weather settings -->
     <string name="statusbar_weather_title">Status bar weather</string>
     <string name="statusbar_weather_summary">Configure from QS settings/Weather</string>
