@@ -76,7 +76,7 @@ public class CarrierLabelSettings extends SettingsPreferenceFragment implements
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
-        addPreferencesFromResource(R.xml.x_carrier_label);
+        addPreferencesFromResource(R.xml.derpzone_carrier_label);
         PreferenceScreen prefSet = getPreferenceScreen();
         ContentResolver resolver = getActivity().getContentResolver();
 

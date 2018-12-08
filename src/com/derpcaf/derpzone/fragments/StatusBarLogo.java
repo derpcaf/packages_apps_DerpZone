@@ -47,7 +47,7 @@ public class StatusBarLogo extends SettingsPreferenceFragment implements
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        addPreferencesFromResource(R.xml.x_statusbar_logo);
+        addPreferencesFromResource(R.xml.derpzone_statusbar_logo);
 
         mShowLogo = (ListPreference) findPreference("status_bar_logo");
         mShowLogo.setOnPreferenceChangeListener(this);
@@ -76,7 +76,7 @@ public class StatusBarLogo extends SettingsPreferenceFragment implements
 
     @Override
     public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.XTENSIONS;
+        return MetricsProto.MetricsEvent.DERPZONE;
     }
 
     @Override

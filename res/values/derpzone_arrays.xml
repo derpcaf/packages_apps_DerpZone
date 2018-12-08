@@ -325,7 +325,7 @@
         <item>5</item>
     </string-array>
 
-    <!-- Xtended Logo -->
+    <!-- Derp Logo -->
     <string-array name="status_bar_logo_entries" translatable="false">
         <item>@string/status_bar_logo_disabled</item>
         <item>@string/status_bar_logo_left</item>
@@ -337,7 +337,6 @@
         <item>2</item>
     </string-array>
     <string-array name="status_bar_logo_style_entries" translatable="false">
-        <item>Derp</item>
         <item>GZR Skull</item>
         <item>GZR Circle</item>
         <item>Batman</item>
@@ -372,6 +371,7 @@
     </string-array>
      <string-array name="status_bar_logo_style_values" translatable="false">
         <item>0</item>
+        <item>1</item>
         <item>2</item>
         <item>3</item>
         <item>4</item>
@@ -397,12 +397,11 @@
         <item>24</item>
         <item>25</item>
         <item>26</item>
+        <item>27</item>
         <item>28</item>
         <item>29</item>
         <item>30</item>
         <item>31</item>
-        <item>32</item>
-        <item>33</item>
     </string-array>
 
 </resources>
