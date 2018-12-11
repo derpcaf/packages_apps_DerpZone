@@ -578,6 +578,13 @@
     <string name="lockscreen_visualizer_enable">Enable lockscreen visualizer</string>
     <string name="lockscreen_visualizer_enable_summary">Show visualizer on lockscreen when music is playing</string>
 
+    <!-- Burn-in Protection -->
+    <string name="navigation_burnin_category">Burn-in Protection</string>
+    <string name="burn_in_protection_title">Enable</string>
+    <string name="burn_in_protection_summary">Shift navabr and statusbar icons to prevent burn-in</string>
+    <string name="burn_in_protection_interval_title">Interval of shift</string>
+    <string name="burn_in_protection_interval_summary">How often to make icons shift</string>
+
     <!-- Statusbar logo -->
     <string name="status_bar_logo_category_title">Statusbar Logo</string>
     <string name="status_bar_logo_category_summary">Enable to display logo in the status bar</string>
@@ -697,6 +704,10 @@
     <string name="qs_tile_title_visibility_summary">Display title below each tile</string> 
 
     <string name="sysui_qqs_count_title">Small tiles</string>	
+
+    <!-- Onehand UI mode -->
+    <string name="one_hand_mode_title">Enable using one-hand mode</string>
+    <string name="one_hand_mode_summary">Allow swiping across right or left on navbar to enable</string>
 
     <!-- Gesture Anywhere -->
     <string name="gesture_anywhere_title">Gesture Anywhere</string>
@@ -870,7 +881,7 @@
     <string name="volume_panel_on_left_title">Volume Panel on Left</string>
     <string name="volume_panel_on_left_summary">Change volume panel from right side to left side</string>
 
-    <string name="navigationbar_settings_title">Navigation Bar</string>
-    <string name="navigationbar_settings_summary">NavBar Customizations</string>
+    <string name="navigationbar_settings_title">SmartNav Bar</string>
+    <string name="navigationbar_settings_summary">Smart Nav Bar Customizations</string>
 
 </resources>
