@@ -76,10 +76,17 @@
         android:summary="@string/fprint_sucess_vib_summary"
         android:persistent="false" />
 
-    <com.derpcaf.derpzone.preferences.SecureSettingSwitchPreference
-        android:key="lockscreen_visualizer_enabled"
-        android:title="@string/lockscreen_visualizer_enable"
-        android:summary="@string/lockscreen_visualizer_enable_summary"
+    <com.derpcaf.derpzone.preferences.SystemSettingSwitchPreference
+        android:key="lockscreen_media_metadata"
+        android:title="@string/media_art_title"
+        android:summary="@string/media_art_summary"
         android:defaultValue="false" />
+
+        <com.derpcaf.derpzone.preferences.SecureSettingSwitchPreference
+            android:key="lockscreen_visualizer_enabled"
+            android:title="@string/lockscreen_visualizer_enable"
+            android:summary="@string/lockscreen_visualizer_enable_summary"
+            android:defaultValue="false" />
+
 
 </PreferenceScreen>
