@@ -90,6 +90,9 @@
     <string name="powermenu_screenrecord">Screenrecord</string>
     <string name="global_actions_onthego">OnTheGo</string>
 
+    <string name="long_press_power_torch_title">Long press for flashlight</string>
+    <string name="long_press_power_torch_summary">Toggle flashlight when screen is off</string>
+
     <!-- App Ops -->
     <string name="app_ops_summary">Control apps operations</string>
 

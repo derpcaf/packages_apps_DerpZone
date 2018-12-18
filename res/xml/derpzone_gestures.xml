@@ -31,6 +31,12 @@
         android:summary="@string/gesture_settings_summary"
         android:defaultValue="false" />
 
+    <com.derpcaf.derpzone.preferences.SystemSettingSwitchPreference
+                android:key="long_press_power_torch"
+            android:title="@string/long_press_power_torch_title"
+            android:summary="@string/long_press_power_torch_summary"
+            android:defaultValue="false" />
+
     <PreferenceCategory
          android:key="dtts_category"
          android:title="@string/dtts_category_header" >
