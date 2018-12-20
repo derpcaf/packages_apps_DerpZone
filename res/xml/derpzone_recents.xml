@@ -18,6 +18,10 @@
     android:title="@string/recents_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+     <PreferenceCategory
+         android:key="recents_ui_aosp_recents_category"
+         android:title="@string/aosp_recents_category">
+
     <ListPreference
         android:key="recents_component"
         android:title="@string/recents_component_type_title"
@@ -26,11 +30,32 @@
         android:defaultValue="0"
         android:entryValues="@array/recents_component_type_title_values"/>
 
+     </PreferenceCategory>
+
+     <PreferenceCategory
+         android:key="recents_ui_oreo_recents_category"
+
+    <PreferenceCategory
+        android:key="slim_recents_category"
+        android:title="@string/slim_recents_title">
+        <com.derpcaf.derpzone.preferences.SystemSettingSwitchPreference
+            android:key="use_slim_recents"
+            android:title="@string/slim_recents_title"
+            android:summary="@string/slim_recents_summary"
+            android:defaultValue="false" />
+        <PreferenceScreen
+            android:key="slim_recents_fragment"
+            android:fragment="com.derpcaf.derpzone.fragments.SlimRecents"
+            android:title="@string/slim_recents_fragment_title"
+            android:summary="@string/slim_recents_fragment_summary"
+            android:dependency="use_slim_recents" />
+    </PreferenceCategory>
+
     <com.derpcaf.derpzone.preferences.SystemSettingSwitchPreference
         android:key="show_clear_all_recents"
         android:title="@string/show_clear_all_recents_button_title"
         android:summary="@string/show_clear_all_recents_button_summary"
-        android:defaultValue="true" />
+        android:defaultValue="false" />
     
     <ListPreference
         android:key="recents_clear_all_location"
@@ -81,4 +106,7 @@
         android:summary="@string/recents_full_screen_date_summary"
         android:defaultValue="false" />
 
+     </PreferenceCategory>
+
 </PreferenceScreen>
+
