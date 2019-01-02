@@ -63,7 +63,7 @@
             android:summary="@string/qs_tile_title_visibility_summary" 
             android:defaultValue="true" /> 
 
-        <com.msm.xtended.preferences.SystemSettingSeekBarPreference
+        <com.derpcaf.derpzone.preferences.SystemSettingSeekBarPreference
             android:key="sysui_qqs_count"
             android:title="@string/sysui_qqs_count_title"
             android:max="8"
@@ -92,8 +92,6 @@
         android:summary="@string/qs_brightness_position_bottom_summary"
         android:defaultValue="false"
         android:dependency="qs_show_brightness_slider" />
-
-    <com.derpcaf.derpzone.preferences.SecureSettingSwitchPreference
 
     <ListPreference
         android:key="quick_pulldown"
