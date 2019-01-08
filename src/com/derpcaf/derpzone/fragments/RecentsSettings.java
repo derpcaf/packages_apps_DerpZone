@@ -8,11 +8,12 @@ import android.content.res.Resources;
 import android.os.Bundle;
 import android.os.SystemProperties;
 import android.os.UserHandle;
-import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
+import android.support.v14.preference.SwitchPreference;
+import android.support.v7.preference.ListPreference;
+import android.support.v7.preference.PreferenceCategory;
 import android.support.v7.preference.PreferenceScreen;
 import android.support.v7.preference.Preference.OnPreferenceChangeListener;
-import android.support.v14.preference.SwitchPreference;
 import android.provider.Settings;
 import com.android.settings.R;
 
@@ -54,22 +55,6 @@ public class RecentsSettings extends SettingsPreferenceFragment implements
         mRecentsClearAllLocation.setSummary(mRecentsClearAllLocation.getEntry());
         mRecentsClearAllLocation.setOnPreferenceChangeListener(this);
 
-        // oreo recents type
-        mRecentsType = (ListPreference) findPreference(RECENTS_TYPE);
-        int style = Settings.System.getIntForUser(resolver,
-                Settings.System.RECENTS_LAYOUT_STYLE, 0, UserHandle.USER_CURRENT);
-        mRecentsType.setValue(String.valueOf(style));
-        mRecentsType.setSummary(mRecentsType.getEntry());
-        mRecentsType.setOnPreferenceChangeListener(this);
-        oreoRecentsCat = (PreferenceCategory)findPreference("recents_ui_oreo_recents_category");
-        oreoRecentsCat.setEnabled(type == RECENTS_COMPONENT_OREO);
-
-        mImmersiveRecents = (ListPreference) findPreference(IMMERSIVE_RECENTS);
-        mImmersiveRecents.setValue(String.valueOf(Settings.System.getInt(
-                resolver, Settings.System.IMMERSIVE_RECENTS, 0)));
-        mImmersiveRecents.setSummary(mImmersiveRecents.getEntry());
-        mImmersiveRecents.setOnPreferenceChangeListener(this);
-
         // recents component type
         mRecentsComponentType = (ListPreference) findPreference(RECENTS_COMPONENT_TYPE);
         int type = Settings.System.getInt(resolver,
@@ -77,6 +62,23 @@ public class RecentsSettings extends SettingsPreferenceFragment implements
         mRecentsComponentType.setValue(String.valueOf(type));
         mRecentsComponentType.setSummary(mRecentsComponentType.getEntry());
         mRecentsComponentType.setOnPreferenceChangeListener(this);
+        oreoRecentsCat = (PreferenceCategory)findPreference("recents_ui_oreo_recents_category");
+        oreoRecentsCat.setEnabled(type == RECENTS_COMPONENT_OREO);
+
+        // oreo recents type
+        mRecentsType = (ListPreference) findPreference(RECENTS_TYPE);
+        int style = Settings.System.getIntForUser(resolver,
+                Settings.System.RECENTS_LAYOUT_STYLE, 0, UserHandle.USER_CURRENT);
+        mRecentsType.setValue(String.valueOf(style));
+        mRecentsType.setSummary(mRecentsType.getEntry());
+        mRecentsType.setOnPreferenceChangeListener(this);
+
+        mImmersiveRecents = (ListPreference) findPreference(IMMERSIVE_RECENTS);
+        mImmersiveRecents.setValue(String.valueOf(Settings.System.getInt(
+                resolver, Settings.System.IMMERSIVE_RECENTS, 0)));
+        mImmersiveRecents.setSummary(mImmersiveRecents.getEntry());
+        mImmersiveRecents.setOnPreferenceChangeListener(this);
+
     }
 
     @Override
