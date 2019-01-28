@@ -18,6 +18,9 @@
     android:title="@string/gestures_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+            <intent android:action="android.intent.action.MAIN"
+                android:targetPackage="com.android.systemui" />
+
     <Preference
         android:key="gesture_settings"
         android:title="@string/aosp_gesture_preference"
