@@ -75,6 +75,9 @@
     <string name="notification_light_settings">Notifications Light</string>
     <string name="notification_light_summary">Notif. light customization</string>    
 
+    <string name="qs_header_title">Header</string>
+    <string name="qs_header_summary">Quick setting header customizations</string>
+
     <!-- Power Menu -->
     <string name="powermenu_screenshot">Screenshot</string>
     <string name="powermenu_power">Power</string>
