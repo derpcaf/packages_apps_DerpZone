@@ -41,7 +41,7 @@ public class NetworkTraffic extends SettingsPreferenceFragment implements
 
     private CustomSeekBarPreference mThreshold;
     private SystemSettingSwitchPreference mNetMonitor;
-    private ListPreference mNetTrafficType;
+    private SystemSettingSwitchPreference mNetMonitorSB;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -58,6 +58,12 @@ public class NetworkTraffic extends SettingsPreferenceFragment implements
         mNetMonitor.setChecked(isNetMonitorEnabled);
         mNetMonitor.setOnPreferenceChangeListener(this);
 
+	boolean isNetMonitorSBEnabled = Settings.System.getIntForUser(resolver,
+                Settings.System.NETWORK_TRAFFIC_STATE_SB, 0, UserHandle.USER_CURRENT) == 1;
+        mNetMonitorSB = (SystemSettingSwitchPreference) findPreference("network_traffic_state_sb");
+        mNetMonitorSB.setChecked(isNetMonitorSBEnabled);
+        mNetMonitorSB.setOnPreferenceChangeListener(this);
+
         int value = Settings.System.getIntForUser(resolver,
                 Settings.System.NETWORK_TRAFFIC_TYPE, 0, UserHandle.USER_CURRENT);
         mNetTrafficType = (ListPreference) findPreference("network_traffic_type");
@@ -71,7 +77,7 @@ public class NetworkTraffic extends SettingsPreferenceFragment implements
         mThreshold = (CustomSeekBarPreference) findPreference("network_traffic_autohide_threshold");
         mThreshold.setValue(value);
         mThreshold.setOnPreferenceChangeListener(this);
-        mThreshold.setEnabled(isNetMonitorEnabled);
+	mThreshold.setEnabled(true);
     }
 
     @Override
@@ -83,6 +89,14 @@ public class NetworkTraffic extends SettingsPreferenceFragment implements
                     Settings.System.NETWORK_TRAFFIC_STATE, value ? 0 : 1,
                     UserHandle.USER_CURRENT);
             mNetMonitor.setChecked(value);
+            mThreshold.setEnabled(value);
+            return true;
+	} else if (preference == mNetMonitorSB) {
+	    boolean value = (Boolean) objValue;
+            Settings.System.putIntForUser(getActivity().getContentResolver(),
+                    Settings.System.NETWORK_TRAFFIC_STATE_SB, value ? 0 : 0,
+                    UserHandle.USER_CURRENT);
+            mNetMonitorSB.setChecked(value);
             mThreshold.setEnabled(value);
             return true;
         } else if (preference == mThreshold) {

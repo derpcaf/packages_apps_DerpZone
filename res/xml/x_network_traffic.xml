@@ -18,26 +18,33 @@
     android:title="@string/network_traffic_state_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-    <com.derpcaf.derpzone.preferences.SystemSettingSwitchPreference
-        android:key="network_traffic_state"
-        android:title="@string/network_traffic_state_title"
-        android:summary="@string/network_traffic_state_summary"
-        android:defaultValue="true" />
-
-    <ListPreference
-        android:key="network_traffic_type"
-        android:title="@string/network_traffic_type"
-        android:entries="@array/show_network_traffic_type_entries"
-        android:entryValues="@array/show_network_traffic_type_values"
-        android:dependency="network_traffic_state"
-        android:persistent="false" />
+    <!-- Network Traffic statusbar -->
+    <PreferenceCategory
+        android:title="@string/network_traffic_statusbar_title" >
 
     <com.derpcaf.derpzone.preferences.SystemSettingSwitchPreference
-        android:key="network_traffic_hidearrow"
-        android:title="@string/network_traffic_hidearrow"
-        android:summary="@string/network_traffic_hidearrow_summary"
-        android:dependency="network_traffic_state"
-        android:defaultValue="false" />
+            android:key="network_traffic_state_sb"
+            android:title="@string/network_traffic_sb_state_title"
+            android:defaultValue="false" />
+    </PreferenceCategory>
+
+    <!-- Network Traffic QS statusbar header -->
+    <PreferenceCategory
+        android:title="@string/network_traffic_qs_statusbar_title" >
+
+        <com.derpcaf.derpzone.preferences.SystemSettingSwitchPreference
+            android:key="network_traffic_state"
+            android:title="@string/network_traffic_qs_state_title"
+            android:defaultValue="true" />
+
+        <com.derpcaf.derpzone.preferences.SystemSettingSwitchPreference
+            android:key="network_traffic_hidearrow"
+            android:title="@string/network_traffic_hidearrow"
+            android:summary="@string/network_traffic_hidearrow_summary"
+            android:dependency="network_traffic_state"
+            android:defaultValue="false" />
+
+    </PreferenceCategory>
 
     <com.derpcaf.derpzone.preferences.CustomSeekBarPreference
         android:key="network_traffic_autohide_threshold"
@@ -48,5 +55,3 @@
         android:dependency="network_traffic_state" />
 
 </PreferenceScreen>
-
-
