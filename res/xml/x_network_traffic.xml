@@ -20,7 +20,7 @@
 
     <!-- Network Traffic statusbar -->
     <PreferenceCategory
-        android:title="@string/network_traffic_statusbar_title" >
+    android:title="@string/network_traffic_title"
 
     <com.derpcaf.derpzone.preferences.SystemSettingSwitchPreference
             android:key="network_traffic_state_sb"

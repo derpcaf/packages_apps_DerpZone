@@ -40,6 +40,7 @@ public class NetworkTraffic extends SettingsPreferenceFragment implements
         OnPreferenceChangeListener {
 
     private CustomSeekBarPreference mThreshold;
+    private ListPreference mNetTrafficType;
     private SystemSettingSwitchPreference mNetMonitor;
     private SystemSettingSwitchPreference mNetMonitorSB;
 
@@ -53,7 +54,7 @@ public class NetworkTraffic extends SettingsPreferenceFragment implements
         final ContentResolver resolver = getActivity().getContentResolver();
 
         boolean isNetMonitorEnabled = Settings.System.getIntForUser(resolver,
-                Settings.System.NETWORK_TRAFFIC_STATE, 0, UserHandle.USER_CURRENT) == 1;
+                Settings.System.NETWORK_TRAFFIC_STATE, 1, UserHandle.USER_CURRENT) == 1;
         mNetMonitor = (SystemSettingSwitchPreference) findPreference("network_traffic_state");
         mNetMonitor.setChecked(isNetMonitorEnabled);
         mNetMonitor.setOnPreferenceChangeListener(this);
@@ -65,53 +66,42 @@ public class NetworkTraffic extends SettingsPreferenceFragment implements
         mNetMonitorSB.setOnPreferenceChangeListener(this);
 
         int value = Settings.System.getIntForUser(resolver,
-                Settings.System.NETWORK_TRAFFIC_TYPE, 0, UserHandle.USER_CURRENT);
-        mNetTrafficType = (ListPreference) findPreference("network_traffic_type");
-        mNetTrafficType.setValue(String.valueOf(value));
-        mNetTrafficType.setSummary(mNetTrafficType.getEntry());
-        mNetTrafficType.setOnPreferenceChangeListener(this);
-        mNetTrafficType.setEnabled(isNetMonitorEnabled);
-
-        value = Settings.System.getIntForUser(resolver,
                 Settings.System.NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD, 1, UserHandle.USER_CURRENT);
         mThreshold = (CustomSeekBarPreference) findPreference("network_traffic_autohide_threshold");
         mThreshold.setValue(value);
         mThreshold.setOnPreferenceChangeListener(this);
-	mThreshold.setEnabled(true);
+	mThreshold.setEnabled(
+	    (isNetMonitorEnabled || isNetMonitorSBEnabled) ? true : false);
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object objValue) {
-
+	final ContentResolver resolver = getActivity().getContentResolver();
         if (preference == mNetMonitor) {
             boolean value = (Boolean) objValue;
+	    boolean netmonitorSBState = Settings.System.getIntForUser(resolver,
+	            Settings.System.NETWORK_TRAFFIC_STATE_SB, 0, UserHandle.USER_CURRENT) == 1;
             Settings.System.putIntForUser(getActivity().getContentResolver(),
-                    Settings.System.NETWORK_TRAFFIC_STATE, value ? 0 : 1,
+                    Settings.System.NETWORK_TRAFFIC_STATE, value ? 1 : 0,
                     UserHandle.USER_CURRENT);
             mNetMonitor.setChecked(value);
-            mThreshold.setEnabled(value);
+	    mThreshold.setEnabled((value == true || netmonitorSBState) ? true : false);
             return true;
 	} else if (preference == mNetMonitorSB) {
 	    boolean value = (Boolean) objValue;
+	    boolean netmonitorState = Settings.System.getIntForUser(resolver,
+                    Settings.System.NETWORK_TRAFFIC_STATE, 1, UserHandle.USER_CURRENT) == 1;
             Settings.System.putIntForUser(getActivity().getContentResolver(),
                     Settings.System.NETWORK_TRAFFIC_STATE_SB, value ? 0 : 0,
                     UserHandle.USER_CURRENT);
             mNetMonitorSB.setChecked(value);
-            mThreshold.setEnabled(value);
+	    mThreshold.setEnabled((value == true || netmonitorState) ? true : false);
             return true;
         } else if (preference == mThreshold) {
             int val = (Integer) objValue;
             Settings.System.putIntForUser(getContentResolver(),
                     Settings.System.NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD, val,
                     UserHandle.USER_CURRENT);
-            return true;
-        } else if (preference == mNetTrafficType) {
-            int val = Integer.valueOf((String) objValue);
-            Settings.System.putIntForUser(getContentResolver(),
-                    Settings.System.NETWORK_TRAFFIC_TYPE, val,
-                    UserHandle.USER_CURRENT);
-            int index = mNetTrafficType.findIndexOfValue((String) objValue);
-            mNetTrafficType.setSummary(mNetTrafficType.getEntries()[index]);
             return true;
         }
         return false;
